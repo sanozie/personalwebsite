@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="951" height="705" viewBox="0 0 951 705">
+  <defs>
+    <filter id="Rectangle_5" x="0" y="0" width="951" height="705" filterUnits="userSpaceOnUse">
+      <feOffset dy="20" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="7.5" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="diyhacks" transform="translate(-659.5 -207.5)">
+    <g id="Group_10" data-name="Group 10" transform="translate(14 -224)" style="mix-blend-mode: darken;isolation: isolate">
+      <g transform="matrix(1, 0, 0, 1, 645.5, 431.5)" filter="url(#Rectangle_5)">
+        <rect id="Rectangle_5-2" data-name="Rectangle 5" width="906" height="660" rx="13" transform="translate(22.5 2.5)" fill="#3d3d3d"/>
+      </g>
+    </g>
+    <g id="Group_10-2" data-name="Group 10" transform="translate(771.8 320.518)">
+      <path id="Icon_material-desktop-windows" data-name="Icon material-desktop-windows" d="M194.557,3H20.806A19.362,19.362,0,0,0,1.5,22.306V138.14a19.362,19.362,0,0,0,19.306,19.306h67.57v19.306H69.07v19.306h77.223V176.751H126.987V157.445h67.57a19.362,19.362,0,0,0,19.306-19.306V22.306A19.362,19.362,0,0,0,194.557,3Zm0,135.14H20.806V22.306H194.557Z" transform="translate(-1.5 -3)" fill="none" stroke="#ffe600" stroke-width="11"/>
+      <rect id="Rectangle_15" data-name="Rectangle 15" width="189" height="133" transform="translate(11.2 11.482)" fill="#2b2b2b"/>
+      <g id="Rectangle_16" data-name="Rectangle 16" transform="translate(70.2 176.482)" fill="#2b2b2b" stroke="#707070" stroke-width="1">
+        <rect width="72" height="15" stroke="none"/>
+        <rect x="0.5" y="0.5" width="71" height="14" fill="none"/>
+      </g>
+    </g>
+    <g id="Group_9" data-name="Group 9" transform="translate(920.728 588.455)">
+      <g id="Icon_feather-smartphone" data-name="Icon feather-smartphone" transform="translate(0 0)">
+        <path id="Path_1" data-name="Path 1" d="M25.526,3h90.131a18.026,18.026,0,0,1,18.026,18.026v144.21a18.026,18.026,0,0,1-18.026,18.026H25.526A18.026,18.026,0,0,1,7.5,165.237V21.026A18.026,18.026,0,0,1,25.526,3Z" transform="translate(-7.5 -3)" fill="none" stroke="#50e3c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+        <path id="Path_2" data-name="Path 2" d="M18,27h0" transform="translate(45.092 117.21)" fill="none" stroke="#50e3c1" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      </g>
+    </g>
+    <g id="open-source" transform="translate(1079.459 321.455)">
+      <g id="Group_8" data-name="Group 8" transform="translate(0 0)">
+        <path id="Path_3" data-name="Path 3" d="M93.167,8.144a93.089,93.089,0,0,0-33.4,180.01,5.734,5.734,0,0,0,4.612-.2,5.843,5.843,0,0,0,3.016-3.505l17.469-55.784a5.813,5.813,0,0,0-2.737-6.836,23.281,23.281,0,1,1,22.081.012,5.8,5.8,0,0,0-2.737,6.836l17.469,55.784a5.843,5.843,0,0,0,3.016,3.505,5.907,5.907,0,0,0,2.539.582,5.784,5.784,0,0,0,2.073-.384A93.1,93.1,0,0,0,93.167,8.144Z" transform="translate(0 -8.144)" fill="none" stroke="#d0f" stroke-width="10"/>
+      </g>
+    </g>
+    <g id="Group_13" data-name="Group 13" transform="translate(-249 152)">
+      <g id="Rectangle_17" data-name="Rectangle 17" transform="translate(1438 426)" fill="none" stroke="#00c4ff" stroke-linejoin="round" stroke-width="10">
+        <rect width="114" height="202" rx="42" stroke="none"/>
+        <rect x="5" y="5" width="104" height="192" rx="37" fill="none"/>
+      </g>
+      <g id="Rectangle_18" data-name="Rectangle 18" transform="translate(1604 446)" fill="none" stroke="#00c4ff" stroke-linejoin="round" stroke-width="10">
+        <rect width="89" height="38" rx="19" stroke="none"/>
+        <rect x="5" y="5" width="79" height="28" rx="14" fill="none"/>
+      </g>
+      <g id="Rectangle_19" data-name="Rectangle 19" transform="translate(1604 508)" fill="none" stroke="#00c4ff" stroke-linejoin="round" stroke-width="10">
+        <rect width="89" height="38" rx="19" stroke="none"/>
+        <rect x="5" y="5" width="79" height="28" rx="14" fill="none"/>
+      </g>
+      <g id="Rectangle_20" data-name="Rectangle 20" transform="translate(1604 570)" fill="none" stroke="#00c4ff" stroke-linejoin="round" stroke-width="10">
+        <rect width="89" height="38" rx="19" stroke="none"/>
+        <rect x="5" y="5" width="79" height="28" rx="14" fill="none"/>
+      </g>
+      <line id="Line_2" data-name="Line 2" x2="52" transform="translate(1552.5 527.5)" fill="none" stroke="#00c4ff" stroke-width="5"/>
+      <line id="Line_3" data-name="Line 3" x2="36" y2="62" transform="translate(1574.5 527.5)" fill="none" stroke="#00c4ff" stroke-width="5"/>
+      <line id="Line_4" data-name="Line 4" y1="62" x2="36" transform="translate(1574.5 465.5)" fill="none" stroke="#00c4ff" stroke-width="5"/>
+    </g>
+    <g id="Icon_feather-clipboard" data-name="Icon feather-clipboard" transform="translate(1378.2 336)">
+      <path id="Path_4" data-name="Path 4" d="M115.956,6h18.326a18.326,18.326,0,0,1,18.326,18.325V152.6a18.326,18.326,0,0,1-18.326,18.325H24.326A18.326,18.326,0,0,1,6,152.6V24.325A18.326,18.326,0,0,1,24.326,6H42.652" transform="translate(0 1.326)" fill="none" stroke="#fd4b4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+      <path id="Path_5" data-name="Path 5" d="M21.163,3H76.141A9.163,9.163,0,0,1,85.3,12.163V30.489a9.163,9.163,0,0,1-9.163,9.163H21.163A9.163,9.163,0,0,1,12,30.489V12.163A9.163,9.163,0,0,1,21.163,3Z" transform="translate(30.652 -14)" fill="none" stroke="#fd4b4b" stroke-linecap="round" stroke-linejoin="round" stroke-width="10"/>
+    </g>
+  </g>
+</svg>
