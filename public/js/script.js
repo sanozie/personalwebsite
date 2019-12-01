@@ -10,6 +10,7 @@ var projectData = [
           "buttonTextColor": "white",
           "primaryColor": "#164869",
           "counter": ".01",
+          "buttonLink": "http://theschoolboard.co",
 
 
           "indicators": {
@@ -52,6 +53,7 @@ var projectData = [
           "buttonTextColor": "black",
           "primaryColor": "white",
           "counter": ".02",
+          "buttonLink": "http://titanrobotics2022.com",
 
           "indicators": {
                "border": "1px solid white",
@@ -84,6 +86,7 @@ var projectData = [
           "buttonTextColor": "white",
           "primaryColor": "#489EC0",
           "counter": ".03",
+          "buttonLink": "../CodeAuthority/index.html",
 
           "indicators": {
                "border": "1px solid #489EC0",
@@ -160,6 +163,7 @@ var projectData = [
           "buttonTextColor": "#2b2b2b",
           "primaryColor": "white",
           "counter": ".05",
+          "buttonLink": "../thing.html",
 
           "indicators": {
                "border": "1px solid white",
@@ -246,17 +250,17 @@ var projectData = [
      $.fn.nameMove = function(x) {
           var focalpoint = $(document).width()/2;
           var movemeter = -(x - focalpoint);
-          var position = movemeter/45;
+          var position = movemeter/55;
           $(this).css("left", position);
           var background = "linear-gradient("+movemeter/20+"deg, #be5108, #be5108,#be5108,  #ca3954, #ae478a, #755ea8, #2e6ca4, #2e6ca4, #2e6ca4)";
-          $(this).css("background-image", background);
+          $("#samanozie").css("background-image", background);
      }
      $.fn.picMove = function(x) {
           var focalpoint = $(document).width()/2;
           var offset = $("#propic").outerWidth()/2;
           var currentPosition = focalpoint-offset;
           var movemeter = -(x - focalpoint);
-          var position = currentPosition + movemeter/10;
+          var position = currentPosition + movemeter/35;
           $(this).css("left", position);
      }
      $.fn.elementMove = function(x, y, level) {
@@ -325,6 +329,14 @@ var projectData = [
           $(`#${fontData.id}`).css("font-family", `${fontData.fontFamily}`)
      });
 
+          //Changing button link
+          $(this).find("a").removeAttr("href");
+          if(data.buttonLink) {
+               $(this).find("a").attr("href", `${data.buttonLink}`).find("button").text("View Site")
+          } else {
+               $(this).find("button").text("View Description")
+          }
+
           //changing css
           $(".color-change-text").css("color", `${data.primaryColor}`);
           $(".color-change-element").css({
@@ -338,7 +350,15 @@ var projectData = [
           $(".active").css("background", data.indicators.active);
           $("g").find("path").attr("fill", `${data.primaryColor}`);
      }
-     //Changing element opacity
+     //changing opacity on mousemove
+     $.fn.opacityChangeLeft = function(x) {
+          var focalpoint = $(document).width()/2
+          $(this).css("opacity", -(x-focalpoint)/focalpoint);
+     }
+     $.fn.opacityChangeRight = function(x) {
+          var focalpoint = $(document).width()/2;
+          $(this).css("opacity", (x-focalpoint)/focalpoint);
+     }
 
 $(document).ready(function() {
      //streching the header text
@@ -351,9 +371,11 @@ $(document).ready(function() {
           var x = event.pageX;
           var y = event.pageY;
           $("#propic").picMove(x);
-          $("#samanozie").nameMove(x);
+          $("#nameContainer").nameMove(x);
           $("#projectSample").elementMove(x, y, 45);
           $("#heroText, #dataCol, #headerRow").elementMove(x, y, 25);
+          $("#arrowRow").opacityChangeLeft(x);
+          $("#footerIconRow").opacityChangeRight(x);
      });
 
 	//Making the landing elements move at different speeds on scroll
@@ -368,15 +390,15 @@ $(document).ready(function() {
           anime({
                targets: '#projectIMG, #heroText, #dataCol,  #headerRow',
                opacity: [1,0],
-               duration: 500,
-               delay: anime.stagger(70),
+               duration: 400,
+               delay: anime.stagger(100),
                easing: 'easeOutQuad',
                complete: function() {
                     //fading out background w/ image
                     anime({
                          targets: "#projectContainer",
                          opacity: [1,0],
-                         duration: 300,
+                         duration: 400,
                          easing: 'easeOutQuad',
                          complete: function() {
                               $("#projects").dataLoad(index);
@@ -384,15 +406,15 @@ $(document).ready(function() {
                               anime({
                                    targets: "#projectContainer",
                                    opacity: [0,1],
-                                   duration: 300,
+                                   duration: 400,
                                    easing: 'easeOutQuad',
                                    complete: function() {
                                         //Fade in foreground elements
                                         anime({
                                              targets: '#projectIMG, #heroText, #dataCol,  #headerRow',
                                              opacity: [0,1],
-                                             duration: 500,
-                                             delay: anime.stagger(70),
+                                             duration: 400,
+                                             delay: anime.stagger(100),
                                              easing: 'easeInOutQuad'
                                         })
                                    }

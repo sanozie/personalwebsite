@@ -62,10 +62,14 @@ ol {
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 #landing {
   overflow: hidden;
   height: 100vh;
-  background: linear-gradient(180deg, #ededed 66%, #ffffff 74%);
+  background: linear-gradient(20deg, #dbdbdb, #ffffff);
   padding: 0;
 }
 #landing #profile {
@@ -80,16 +84,68 @@ ol {
   display: flex;
   align-items: center;
   justify-content: center;
+  top: -8%;
+  position: relative;
+  transform: rotate(10deg);
+}
+#landing #nameContainer #title {
+  color: rgba(0, 0, 0, 0.2);
+  font-size: calc(1rem + 1vw);
+  font-family: "Raleway", sans-serif;
+  font-weight: 100;
+  margin-left: 25px;
+  margin-top: -7px;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 #landing h1 {
   font-family: "strong_glasgow_demobold";
   font-weight: 100;
   font-size: 15vw;
   margin-left: 20px;
-  position: relative;
-  transform: rotate(10deg);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+#landing #footer {
+  bottom: 0;
+  margin-bottom: 2%;
+  color: black;
+}
+#landing #footer #arrowContainer {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+#landing #footer #arrowContainer #arrowRow {
+  font-family: "Raleway", sans-serif;
+  color: #be5108;
+}
+#landing #footer #arrowContainer #arrow {
+  height: 50%;
+  margin-top: 25%;
+  margin-bottom: 25%;
+  fill: #be5108;
+  will-change: opacity;
+}
+#landing #footer #arrowContainer #portfolio {
+  margin-bottom: 0;
+  font-weight: bolder;
+}
+#landing #footer #footerIconRow {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+#landing #footer #footerIconRow path {
+  fill: #2e6ca4;
+}
+#landing #footer .footer-icon-container .footer-icon {
+  width: 50%;
+  max-height: 100%;
 }
 
 #projectContainer {

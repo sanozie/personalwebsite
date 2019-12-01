@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<!--Samuel Anozie, October 2019. Mock Code Authority Interview Assignment.-->
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Website Assessment</title>
+
+		<!--Bootstrap links-->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+		<!--Fonts-->
+		<link rel="https://cdn.rawgit.com/mfd/f3d96ec7f0e8f034cc22ea73b3797b59/raw/856f1dbb8d807aabceb80b6d4f94b464df461b3e/gotham.css">
+
+		<!--Local Links-->
+		<link type="text/css" href="styles.css" rel="stylesheet" />
+		<script src = "script.js"></script>
+
+	</head>
+
+	<body>
+		<nav class="navbar navbar-expand flex-column flex-md-row bd-navbar">
+			<a class=" h-100" href="#">
+				<img src="imgs/ca-logo-white.png" class="d-inline-block align-top img-fluid h-100" alt="">
+			</a>
+			<ul class="navbar-nav ml-auto">
+				<li class="nav-item active">
+					<a class="nav-link" href="#">HOME</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">WORK</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">ABOUT</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">CONTACT</a>
+				</li>
+				<li class="nav-item">
+					<button type="button" class="btn">Get an Estimate</button>
+				</li>
+			</ul>
+		</nav>
+		<section id="hero-container" class="container-fluid">
+			<span id = "hero-back" data-scroll-speed = "20">
+				<img src = 'imgs/heroback.png' class = "w-100 img-fluid"/>
+			</span>
+			<div id = "header-text-container" class="row">
+				<div class="col-sm-12">
+					<div class="row justify-content-center">
+						<h1><span class="gradient">APPLICATION</span> DEV</h1>
+					</div>
+					<div class="row justify-content-center">
+						<h1>TECH <span class="gradient">CONSULTING</span></h1>
+					</div>
+					<div class="row justify-content-center">
+						<h1><span class="gradient">BUSINESS</span> INTEL</h1>
+					</div>
+					<div class="row justify-content-center">
+						<h1>USER <span class="gradient">EXPERIENCE</span></h1>
+					</div>
+					<div class="row justify-content-center">
+						<div id="icon-container" class="col-3 text-center">
+							<img id="logo-icon" src="imgs/logoicon.svg" class="img-fluid" />
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-3 text-center">
+							<img src="imgs/arrow.svg" class="img-fluid ">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+			<img id = "service-top-SVG" src = "imgs/wave.svg" class = "img-fluid"/>
+		<section id="services" class="container-fluid">
+			<div id = "service-container-row" class="row">
+				<div class = "col-lg-6">
+					<div class = "row justify-content-center">
+						<div class="col text-center">
+							<h2>OUR SERVICES</h2>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col-md-11">
+							<div class="row justify-content-center">
+								<div class="col-2 text-center">
+									<img src="imgs/icons/Picture1.png" id = "cloudIcon" class = "icon img-fluid active"/>
+								</div>
+								<div class="col-2 text-center">
+									<img src="imgs/icons/Picture2.png" id = "intelIcon" class = "icon img-fluid inactive"/>
+								</div>
+								<div class="col-2 text-center">
+									<img src="imgs/icons/Picture3.png" id = "softwareDevIcon" class = "icon  img-fluid inactive"/>
+								</div>
+								<div class="col-2 text-center">
+									<img src="imgs/icons/Picture4.png" id = "marketingIcon" class = "icon img-fluid inactive"/>
+								</div>
+								<div class="col-2 text-center">
+									<img src="imgs/icons/Picture5.png" id = "mobileIcon" class = "icon img-fluid inactive"/>
+								</div>
+								<div class="col-2 text-center">
+									<img src="imgs/icons/Picture6.png" id = "uxIcon" class = "icon img-fluid inactive"/>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div id = "service-paste-row" class="row justify-content-center h-40">
+						<div id = "service-title-col" class="col-md-4 text-center">
+							<h3 id = "service-title">Cloud Solutions</h3>
+						</div>
+						<div id = "service-text-col" class="col-md-8">
+							<p id = "service-text">We create fast, scalable, and secure custom cloud solutions for business ranging from startups to enterprises. Our developers are capable cloud architects who utilize established computer software to build a custom cloud solution to enhance your employees’ productivity and efficiency.</p>
+						</div>
+					</div>
+				</div>
+				<div class = "col-lg-6 text-center">
+					<img id = "service-pic" src = "imgs/infos/cloud.png" class = "img-fluid"/><br>
+					<img src = "imgs/shadow.svg" class = "img-fluid"/>
+				</div>
+			</div>
+		</section>
+			<img id = "service-bottom-SVG" src = "imgs/reversewave.svg"/>
+		<section id="values" class="container-fluid position-relative">
+				<video  src="video.mp4" preload="preload" id="video"  autoplay loop muted></video>
+			<div id = "black-filter" class = "row"></div>
+			<div id="values-content">
+				<div id = "valuesEnvelope">
+					<div class="row justify-content-center">
+						<div class="col-8 text-center">
+							<p>17+ Years of <span class="gradient">Passionate</span> Work, <span class="gradient">Entrepreneurial</span> Spirit, and <span class="gradient">High-Preforming</span> Products</p>
+						</div>
+					</div>
+					<div class="row justify-content-center">
+						<div class="col text-center">
+							<button type="button" class="btn">Read our Values</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id = "about" class = "container">
+			<div class = "row">
+				<div class = "col">
+					<h2>About Us</h2>
+				</div>
+			</div>
+			<div class = "row">
+				<div class = "col-12">
+					<blockquote class="blockquote">
+						<p class="mb-0">"From startups to enterprise business and everything in between, Code Authority is the team that turns concepts into products."</p>
+						<footer class="blockquote-footer text-right"><cite title="Source Title">Jason Taylor, CEO</cite></footer>
+					</blockquote>
+				</div>
+			</div>
+			<div class = "row">
+				<div class = "col-12">
+					<p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy.
+						<br/><br/>
+						At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.
+					</p>
+				</div>
+			</div>
+			<div id = "about-icon-row-container" class = "row justify-content-center">
+				<div class = "col-2 h-100">
+					<div class = "row justify-content-center about-icon-row">
+						<img src = "imgs/icons/peace.png" class = "img-fluid h-100"/>
+					</div>
+					<div class = "row justify-content-center text-center">
+						<h3>Work-Life <br/>Balance</h3>
+					</div>
+				</div>
+				<div class = "col-2 h-100">
+					<div class = "row justify-content-center about-icon-row">
+						<img src = "imgs/icons/flag.png" class = "img-fluid h-100"/>
+					</div>
+					<div class = "row justify-content-center text-center">
+						<h3>Made in<br/> America</h3>
+					</div>
+				</div>
+				<div class = "col-2 h-100">
+					<div class = "row justify-content-center about-icon-row">
+						<img src = "imgs/icons/bluelogoicon.png" class = "img-fluid h-100"/>
+					</div>
+					<div class = "row justify-content-center text-center">
+						<h3>Strength in <br/>Teamwork</h3>
+					</div>
+				</div>
+				<div class = "col-2 h-100">
+					<div class = "row justify-content-center about-icon-row">
+						<img src = "imgs/icons/plant.png" class = "img-fluid h-100"/>
+					</div>
+					<div class = "row justify-content-center text-center">
+						<h3>Entrepreneurial <br/>Growth</h3>
+					</div>
+				</div>
+				<div class = "col-2 h-100">
+					<div class = "row justify-content-center about-icon-row">
+						<img src = "imgs/icons/quality.png" class = "img-fluid h-100"/>
+					</div>
+					<div class = "row justify-content-center text-center">
+						<h3>Quality <br/>Assurance</h3>
+					</div>
+				</div>
+			</div>
+			<div id = "blog-row" class = "row">
+				<div class = "col">
+					<h2>View Our Blog</h2>
+				</div>
+			</div>
+			<div id = "blog-container" class = "row justify-content-center"></div>
+		</section>
+		<section id="contact" class="container-fluid">
+			<div class="row justify-content-center">
+				<div id = "contact-content" class="col-8 text-center">
+					<h3>Contact Us</h3>
+					<p>Fill out this form and one of our team members will be right with you to help schedule your Free Consultation!</p>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<form action="#" class = "text-center">
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="">Full Name</span>
+						</div>
+						<input type="text" name = "firstName" class="form-control" placeholder = "First">
+						<input type="text" name = "lastName" class="form-control" placeholder = "Last">
+					</div>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text" id="">Email</span>
+						</div>
+						<input type="text" name = "email" class="form-control" placeholder = "code@auth.com">
+					</div>
+					<div class="input-group">
+						<div class="input-group-prepend">
+							<span class="input-group-text">Message</span>
+						</div>
+						<textarea class="form-control" aria-label="With textarea" placeholder = "How may we help?"></textarea>
+					</div>
+					<button type="button" class="btn">Contact the Authority</button>
+				</form>
+			</div>
+		</section>
+		<section id = "footer" class = "container-fluid">
+			<div class = "row justify-content-center w-100 h-50">
+				<div id = "footer-container" class = "col-6 h-100">
+					<div class = "row h-100">
+						<div class = "col-4 h-100">
+							<div class = "row h-100">
+								<div class = "col-6 text-center h-100 footerLink">
+									<p>Privacy Policy</p>
+								</div>
+								<div class = "col-6 text-center h-100 footerLink">
+									<p>Copyright 2019</p>
+								</div>
+							</div>
+						</div>
+						<div class = "col-4 text-center h-100">
+							<img src = "imgs/whitelogoicon.svg" class = "img-fluid h-100"/>
+						</div>
+						<div class = "col-4 h-100">
+							<div class = "row h-100">
+								<div class = "col-4 text-center h-50 mediaIcon">
+									<img src = "imgs/icons/facebooklogo.svg" class = "h-100"/>
+								</div>
+								<div class = "col-4 text-center h-50 mediaIcon">
+									<img src = "imgs/icons/twitterlogo.svg" class = "h-100"/>
+								</div>
+								<div class = "col-4 text-center h-50 mediaIcon">
+									<img src = "imgs/icons/instagramlogo.svg" class = "h-100"/>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+
+</html>
