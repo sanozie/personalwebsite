@@ -1,0 +1,164 @@
+
+@import url('https://fonts.googleapis.com/css?family=Alef');
+@import url('https://fonts.googleapis.com/css?family=Kodchasan');
+
+//Fonts
+$headerFont: 'Kodchasan', sans-serif;
+$subFont: 'Alef', sans-serif;
+
+//Mixins
+@mixin center {
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+//Animations
+@-webkit-keyframes fade {
+	0% {
+		opacity: 0;
+	};
+	100% {
+		opacity: 1;
+	};
+}
+@keyframes fade {
+	0% {
+		opacity: 0;
+	};
+	100% {
+		opacity: 1;
+	};
+}
+
+#header {
+	//background info utilized by svgbackgrounds.com
+	@include center;
+	height: 100vh;
+}
+#background {
+	position: absolute;
+	z-index: -100;
+	height: 210vh;
+	width: 100vw;
+	background-image: url("mountain.svg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+#wheelDiv {
+	padding-top: 10vh;
+	padding-bottom: 10vh;
+	position: relative;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+#headerText {
+	color: darkslategray;
+	font-family: $headerFont;
+	font-size: 8vw;
+	font-style: oblique;
+	font-weight: 900;
+	animation-name: fade;
+	animation-delay: 0.8s;
+	animation-duration: 1s;
+	animation-timing-function: ease-out;
+	animation-fill-mode: backwards;
+}
+#wheelText {
+	position: absolute;
+	top: 35%;
+	left: 37%;
+	font-family: $subFont;
+	font-size: 3.5vw;
+	font-weight: 700;
+	color: darkslategray;
+	#whiteTextSize1 {
+		font-size: 4vw;
+	}
+	#whiteTextSize1 {
+		font-size: 5vw;
+	}
+}
+.icon {
+	position: absolute;
+	top: 30%;
+	left: 28%;
+	width: 45%;
+}
+#descripDiv {
+	border: 1px solid black;
+	@include center;
+}
+#sdgTitle {
+	padding: 5rem;
+	padding-bottom: 2rem;
+	font-size: 4vw;
+	color: darkslategray;
+	font-family: 'Akronim', cursive;
+}
+#descripContainer {
+	background-color: rgba(0, 0, 0, 0.3);
+}
+#sevcHeader {
+	background-color: white;
+	padding: 5rem;
+}
+#secvDescripText {
+	font: 5vw $headerFont;
+	font-weight: 200;
+}
+#bigText {
+	font-size: 13vw;
+	font-weight: 900;
+}
+#sevcDescrip {
+	font-size: 1rem;
+	color: darkslategray;
+	background-color: #f8f8f8;
+	padding: 3rem;
+}
+#featProjects {
+	padding: 2rem;
+}
+#featText {
+	font-family: $headerFont;
+	padding: 2rem;
+	font-size: 5vw;
+	color: darkslategray;
+}
+
+.featured {
+	width: 70%;
+}
+.featCol {
+	@include center;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+#bordered {
+	border-bottom: 5px solid darkslategray;
+	margin-bottom: 3rem;
+}
+#focus {
+	font-family: $subFont;
+	font-size: 2rem;
+}
+.biggerFeat {
+	width: 100%;
+}
+
+.zoom {
+	transition: transform .2s;
+	margin-top:5%;
+}
+.zoom:hover {
+	-ms-transform: scale(1.3); /* IE 9 */
+	-webkit-transform: scale(1.3); /* Safari 3-8 */
+	transform: scale(1.3);
+}
+
+.cart {
+	font-family: $subFont;
+
+}

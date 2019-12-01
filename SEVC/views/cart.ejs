@@ -1,0 +1,147 @@
+<!--Marisa Patel-O'Connor, May 2019. EJS file for product displayal. Colin Schlegel did shopping cart.-->
+<html>
+<head>
+	<title>My Cart</title>
+
+	<!-- Bootstrap, JQuery, & MyCart Plugin CDNs-->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<link rel = "stylesheet" type = "text/css" href = "styles.css"/> <!--External Style Sheet-->
+<link rel = "icon" href = "fav.png" type = "image/jpg"/>
+</head>
+
+<body class="container cart">
+
+	<!-- Header at the top with title and shopping cart -->
+	<div class="page-header">
+		<h1 class="cartHeading">Social Entrepreneurial Ventures
+			<div style="float: right; cursor: pointer;">
+				<span class="glyphicon glyphicon-shopping-cart my-cart-icon"><span class="badge badge-notify my-cart-badge"></span></span>
+			</div>
+		</h1>
+	</div>
+
+	<!-- Interating through the data from fake.json using EJS, printing out the goal name, and then each project below that -->
+	<% videodata.forEach(function(item){ %>
+		<div class = "row" id = "<%= item.id %>">
+			<h1 class="col-md-12 cartHeading"><%= item.goalName %></h1>
+			<% item.projects.forEach(function(proj){%>
+				<div class="col-md-4 zoom text-center" id="image_div">
+					<p class="img_wrapper">
+						<img src="images/<%= proj.image %>" width="150px" height="150px" data-toggle="modal" data-target="#modal-<%= proj.id%>">
+					</p><br>
+				</div>
+
+				<!-- Modal for each project-->
+				<div class="modal fade" id="modal-<%= proj.id%>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title"><%= proj.name %></h5>
+								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true">&times;</span>
+								</button>
+							</div>
+							<img src="images/<%= proj.image %>">
+							<div class="modal-body">
+								<p> <b>Description: </b> </p><%= proj.description %>
+								<p> <b>Price: </b> $10/share </p>
+							</div>
+							<div class="modal-footer">
+								<button class="btn btn-danger my-cart-btn" data-id="<%= proj.id%>" data-name="<%= proj.name%>" data-price="10" data-quantity="1" data-image="images/<%= proj.image %>">Invest</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<% }); %>
+			</div>
+			<% }); %>
+
+			<!-- Back to home button -->
+			<div class = "text-center">
+			<button class = "button1985" onclick="window.location.href = 'index.html';">Home</button>
+			</div>
+
+			<!-- For Shopping Cart Plugin -->
+			<script src="https://www.paypalobjects.com/api/checkout.js"></script>
+			<script src="js/jquery-2.2.3.min.js"></script>
+			<script type='text/javascript' src="js/bootstrap.min.js"></script>
+			<script type='text/javascript' src="js/jquery.mycart.js"></script>
+			<script type="text/javascript">
+			paypal.Button.render({
+			// Configure environment
+			env: 'sandbox',
+			client: {
+			  sandbox: 'AfFodP5YOEA0pEBWTt6TQXLvNT2mDZTkg-JOpOVPy1mgfYi1gUWi5zEfVfPLE_eBL7C8PMlvAQSAFUB8'
+			},
+			// Set up a payment
+			payment: function(data, actions) {
+			  return actions.payment.create({
+				transactions: [{
+				  amount: {
+					total: '0.01',
+					currency: 'USD'
+				  }
+				}]
+			  });
+			},
+			// Execute the payment
+			onAuthorize: function(data, actions) {
+			  return actions.payment.execute().then(function() {
+				  document.getElementById("response").style.display = 'inline-block';
+				document.getElementById("response").innerHTML = 'Thank you for making the payment!';
+			  });
+			}
+			}, '#paypal-button');
+
+			//Function that establishes the icon for the cart and the position.
+			$(function () {
+				var goToCartIcon = function($addTocartBtn){
+					var $cartIcon = $(".my-cart-icon");
+					var $image = $('<img width="30px" height="30px" src="' + $addTocartBtn.data("image") + '"/>').css({"position": "fixed", "z-index": "999"});
+					$addTocartBtn.prepend($image);
+					var position = $cartIcon.position();
+					$image.animate({
+						top: position.top,
+						left: position.left
+					}, 500 , "linear", function() {
+						$image.remove();
+					});
+				}
+				//Sets up the cart itself, and identifies the icon, badge, and quantity.
+				$('.my-cart-btn').myCart({
+					currencySymbol: '$',
+					classCartIcon: 'my-cart-icon',
+					classCartBadge: 'my-cart-badge',
+					classProductQuantity: 'my-product-quantity',
+					classProductRemove: 'my-product-remove',
+					classCheckoutCart: 'my-cart-checkout',
+					affixCartIcon: true,
+					showCheckoutModal: true,
+					numberOfDecimals: 2,
+					cartItems: [
+					],
+					clickOnAddToCart: function($addTocart){
+						goToCartIcon($addTocart);
+					},
+					afterAddOnCart: function(products, totalPrice, totalQuantity) {
+						console.log("afterAddOnCart", products, totalPrice, totalQuantity);
+					},
+					clickOnCartIcon: function($cartIcon, products, totalPrice, totalQuantity) {
+						console.log("cart icon clicked", $cartIcon, products, totalPrice, totalQuantity);
+					},
+					checkoutCart: function(products, totalPrice, totalQuantity) {
+						var checkoutString = "Total Price: $" + totalPrice + "\nTotal Shares Bought: " + totalQuantity;
+						alert(checkoutString)
+						console.log("checking out", products, totalPrice, totalQuantity);
+					},
+				});
+			});
+		</script>
+	</body>
+	</html>

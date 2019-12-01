@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--Samuel Anozie, May 2019. Quarter Project 2. An E-commerce site that prompts users to buy shares of social entrepreneurial ventures-->
+<html lang="en">
+     <head>
+          <meta charset="UTF-8">
+          <base href = "/">
+          <title>SEVC</title>
+
+          <!-- Bootstrap Links -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+          <!--JQuery UI-->
+          <script
+                  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+                  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+                  crossorigin="anonymous"></script>
+
+
+          <!--My Links-->
+          <link rel = "stylesheet" type = "text/css" href = "C:\Users\Sam\Documents\Coding Projects\Works in Progress\Personal Website\SEVC"/>
+          <link rel = "icon" href = "/imgs/fav.png" type = "image/jpg"/>
+          <script src = "/public/wheelscript.js"></script>
+     </head>
+     <body>
+          <!--Span holds background image with mountains-->
+          <span id = "background" data-speed="1.9"></span>
+
+          <!--Header contains invest in the future-->
+          <div class = "container-fluid" id = "header">
+               <div class = "row justify-content-center">
+                    <div class = "col-lg-8">
+                         <h1 class = "whiteText colortext text-center" id = "headerText" >INVEST IN THE FUTURE.</h1>
+                    </div>
+               </div>
+          </div>
+          <!--sdgWheelDiv contains wheel-->
+          <div class = "container-fluid" id = "sdgWheelDiv">
+               <div id = "wheelRow" class = "row justify-content-center">
+                    <div id = "wheelDiv" class="col-lg-6 d-none d-lg-block">
+                         <!--img and map obtained from SDG website-->
+                         <img id="sdgwheel" alt="SDG wheel" class = "img-fluid" usemap="#image-map" src = "../imgs/sdgwheelnumbers.png">
+                         <!-- Image Map Generated using http://www.image-map.net/ -->
+                         <map name="image-map">
+                              <area  title="1" coords="388,170,388,13,493,33,438,181" shape="poly">
+                              <area  title="2" coords="457,188,512,42,607,103,505,217,484,201,471,194" shape="poly">
+                              <area title="3" coords="518,232,622,115,690,204,551,274" shape="poly" >
+                              <area href = "/cart#quality_education" title="4"  coords="560,295,696,223,729,331,575,345" shape="poly">
+                              <area title="5" coords="576,366,572,414,724,460,734,352" shape="poly">
+                              <area title="6" coords="543,482,564,436,715,482,670,578" shape="poly">
+                              <area title="7"  coords="492,537,530,499,656,597,577,673" shape="poly" >
+                              <area title="8" coords="424,568,475,545,558,681,452,724" shape="poly">
+                              <area title="9" coords="349,571,404,568,434,727,320,728" shape="poly" >
+                              <area title="10" coords="278,549,330,569,300,722,196,682" shape="poly" >
+                              <area  title="11" coords="262,540,220,501,96,597,179,675" shape="poly">
+                              <area   title="12" coords="184,438,209,482,79,583,33,481" shape="poly">
+                              <area title="13"  coords="173,364,177,415,24,462,14,350" shape="poly" >
+                              <area title="14" coords="20,327,49,224,193,291,176,339" shape="poly" >
+                              <area title="15" coords="60,200,126,113,238,232,203,275" shape="poly" >
+                              <area title="16"  coords="141,97,235,38,295,186,248,217" shape="poly" >
+                              <area title="17"  coords="312,183,368,173,365,12,256,30" shape="poly" >
+                         </map>
+                         <!--Responsive Plugin (https://github.com/stowball/jQuery-rwdImageMaps). Allows for the image map to be recalculated depending on the viewport size-->
+                         <script src="../public/jquery.rwdImageMaps.min.js"></script>
+                         <script>
+                              $('img[usemap]').rwdImageMaps();
+                         </script>
+                         <div class = "row justify-content-center" id = "chooseText">
+                              <div id = "namePaste" class = "text-center">
+                                   <h3 class = "whiteText" id = "wheelText">CHOOSE<br/> <span id = "whiteTextSize1">YOUR</span><br/> <span id = "whiteTextSize1">GOAL</span><br/><span id = "smallText">Click to view projects</span></h3>
+                              </div>
+                         </div>
+                    </div>
+               </div>
+          </div>
+          <!--Contains all text explaining what SEVC is-->
+          <div id = "SEVCDescrip" class = "container-fluid" >
+               <div id = "sevcHeader" class = "row justify-content-center">
+                    <div class = "col-md-12">
+                         <h2 id = "secvDescripText" class= "coloredText text-center">YOUR SOURCE FOR REAL <span id = "bigText">IMPACT</span></h2>
+                    </div>
+               </div>
+               <div id = "sevcDescrip" class = "row justify-content-center">
+                    <div class = "col-md-8">
+                         <p id = "descrip" ><span id = "focus">AT <span class = "coloredText">SEVC</span>, we present projects with <span class = "coloredText">high potential to make an impact</span> in each of the SDG goals, bettering the world a little more with each new project.</span><br/><br/>
+                              Each presented project has passed various intensive screening programs, including marketing analysis, on-site demonstrations, personal interviews, and viral potential tests, all with flying colors. To be sure that each project is putting their money in the most effective places, each buisness team works with the world-renowned SEVC Venture Captalist Network, an expansive team of over 30 veterans with over 200 years of experience in financial distribution combined.</p>
+                    </div>
+               </div>
+          </div>
+
+          <!--Featureing projects in this div-->
+          <div id = "featProjects" class = "container-fluid">
+               <div class = "row justify-content-center">
+                    <div id = "bordered" class = "col-md-8 text-center">
+                         <h3 id = "featText">FEATURED PROJECTS</h3>
+                    </div>
+               </div>
+               <div class = "row justify-content-center">
+                    <div class = "featCol col-md-3 text-center">
+                         <img class = "zoom featured" src = "projects/food-drop.png" class = "img-fluid">
+                    </div>
+                    <div class = "featCol col-md-3 text-center">
+                         <img class = "zoom biggerFeat featured" src = "projects/music-mesh.png" class = "img-fluid">
+                    </div>
+                    <div class = "featCol col-md-3 text-center">
+                         <img class = "zoom featured" src = "projects/news-now.png" class = "img-fluid">
+                    </div>
+               </div>
+               <div class = "row justify-content-center">
+                    <div class = "featCol col-md-3 text-center">
+                         <img class = "zoom featured" src = "projects/port-a-go.png" class = "img-fluid">
+                    </div>
+                    <div class = "featCol col-md-3 text-center">
+                         <img class = "zoom biggerFeat featured" src = "projects/projection.png" class = "img-fluid">
+                    </div>
+                    <div class = "featCol col-md-3 text-center">
+                         <img class = "zoom featured" src = "projects/thrive.png" class = "img-fluid">
+                    </div>
+               </div>
+          </div>
+     </body>
+</html>
